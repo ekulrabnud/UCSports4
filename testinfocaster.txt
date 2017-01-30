@@ -1,0 +1,21 @@
+Basketball,,,,,
+,05:00 PM,Tennessee at South Carolina,ESPN2,21.2,
+,06:00 PM,Duke at Notre Dame,ESPN,21.1,
+,06:00 PM,South Carolina State at Howard University,ESPN U,21.3,
+,06:00 PM,Boston University at Lehigh,CBS Sports Network ,15.1,
+,06:00 PM,Western Carolina at Mercer,Comcast Sportsnet Plus,17.2,
+,06:30 PM,Brooklyn Nets at Miami Heat,NBA League Pass 1,18.2,18.11
+,06:30 PM,Brooklyn Nets at Miami Heat,NBA League Pass 2,,18.12
+,07:00 PM,Detroit Pistons at Boston Celtics,TNT ,35.1,
+,07:00 PM,Orlando Magic at Minnesota Timberwolves,NBA League Pass 3,,18.13
+,07:00 PM,Orlando Magic at Minnesota Timberwolves,NBA League Pass 4,,18.14
+,07:30 PM,Cleveland Cavaliers at Dallas Mavericks,NBA League Pass 5,,18.15
+,07:30 PM,Cleveland Cavaliers at Dallas Mavericks,NBA League Pass 6,,18.16
+,08:00 PM,Oklahoma State at Oklahoma,ESPN,21.1,
+,08:00 PM,Alabama State at Prairie View A&M Universi..,ESPN U,21.3,
+,08:00 PM,Southern Illinois - Edwardsville at Belmon..,CBS Sports Network ,15.1,
+,08:00 PM,Georgia State at South Alabama,Comcast Sportsnet Plus,17.2,
+,09:30 PM,Memphis Grizzlies at Phoenix Suns,TNT ,35.1,
+Hockey,,,,,
+,06:00 PM,Top Prospects,NHL Network USA,19.1,
+,06:00 PM,All-Star Game,Comcast Sportsnet ,17.1,
