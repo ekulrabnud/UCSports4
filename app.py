@@ -8,6 +8,7 @@ import pdfkit
 import utils
 import json
 
+
 from tvMediaApi_dev import TvMedia
 
 app = Flask(__name__)
@@ -297,6 +298,9 @@ def channelLineup():
 	if request.method == 'GET':
 		query= g.db.execute('''SELECT * from uctvLineups ''')
 		channelLineups = [dict(row) for row in query.fetchall()]
+		# for i in channelLineups:
+		# 	if i['uctvNo'] =='9.11':
+		# 		print i['callsign'],i['uctvNo'],i['channelName']
 		return render_template('Lineups/channelLineups.html',channelLineups=channelLineups)
 
 

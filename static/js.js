@@ -440,6 +440,16 @@ $(document).ready(function() {
                 });
     });
 
+        // $.get('http://api.tvmedia.ca/tv/v4/lineups',
+        //         {"api_key":"22ec502b13e21058c33c1409b148292d","postalCode":60302},
+            
+        
+        //         function(data){
+        //             console.log(data)
+
+
+        // })
+
         $.get("/docs", function(data) {
         $("#docs").html(data);
     });

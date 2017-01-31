@@ -77,6 +77,14 @@ th{
 	background-color:#87BC5E;
 }
 
+.highlight{
+	background-color:#f8d568;
+}
+
+/*.assigned{
+	background-color: red !important;
+}*/
+
 
 /*#index{
 	border-style:solid;
