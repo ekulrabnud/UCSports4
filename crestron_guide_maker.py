@@ -26,7 +26,7 @@ removeThese = [str(i) for i in remove2]
 addBack =  ['NHL Centre Ice HD 1']
 
 
-query = c.execute('''SELECT id,channelNumber,callsign,channelName,uctvNo,stationID,lineupID 
+query = c.execute('''SELECT id,channelNumber,channelName,uctvNo,stationID,lineupID 
 							   FROM uctvLineups 
 							   WHERE uctvNo != ?
 							   ORDER BY channelName''',('None',))

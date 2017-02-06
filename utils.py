@@ -205,10 +205,10 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 
 def getChannels(db):
 
-	query = db.execute('''SELECT id,channelNumber,callsign,channelName,uctvNo,stationID,lineupID,HD
+	query = db.execute('''SELECT id,channelNumber,channelName,uctvNo,providerName,rfChannel,modulator,HD
 						   FROM uctvLineups 
-						   WHERE uctvNo != ?
-						   ORDER BY uctvNo''',('None',))
+						   WHERE uctvNo NOT NULL
+						   ORDER BY uctvNo''')
 
 	channels = [dict(row) for row in query.fetchall()]
 	
