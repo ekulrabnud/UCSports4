@@ -4,4 +4,7 @@ test add station lineups!!
 get rid of cal selection when in mobile mode
 add event calendat update
 
+Directv league pass 750-768
+Directv nhl package 769-787
+
 

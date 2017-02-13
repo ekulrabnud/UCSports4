@@ -163,8 +163,6 @@ def email():
 
 		sportslist = utils.get_live_sports(date,start,stop,g.db)
 
-		print sportslist
-
 	return render_template('LiveSports/email.html',sportslist=sportslist,date=request.form['date'])
 #PDF
 @app.route('/pdf',methods=['POST'])
@@ -298,9 +296,7 @@ def channelLineup():
 	if request.method == 'GET':
 		query= g.db.execute('''SELECT * from uctvLineups ''')
 		channelLineups = [dict(row) for row in query.fetchall()]
-		# for i in channelLineups:
-		# 	if i['uctvNo'] =='9.11':
-		# 		print i['callsign'],i['uctvNo'],i['channelName']
+		
 		return render_template('Lineups/channelLineups.html',channelLineups=channelLineups)
 
 
@@ -342,13 +338,6 @@ def addStation():
 
 			return 'success'
 
-		# g.db.execute('''INSERT INTO uctvLineups (callsign,channelName,stationID,lineupID,uctvNo,HD,crestron)
-		# 				VALUES (?,?,?,?,?,?,?)''',(form['callsign'],form['channelName'],form['stationID'],form['lineupID'],form['uctvNo'],HD,crestron))
-		
-		# try:
-		# 	print channelName,lineupID,uctvNo,str(HD),str(crestron)
-		# except Exception as e:
-		# 	print e
 
 			
 		return 'fail'
@@ -377,9 +366,10 @@ def publish_infocast():
 		formDate = th.convert_date_string(request.form['date'])
 		formStart = th.convert_time_string(request.form['start'])
 		formStop = th.convert_time_string(request.form['stop']) 
+		print formDate,formStart,formStop
 		utils.make_infocaster_file(formStart,formStop,formDate,g.db)
 
-		return jsonify(error=0,message="Infocaster Text File Updated at %s\\%s" % (config.INFOCASTER_TEXT_FILE))
+		return jsonify(error=0,message="Infocaster Text File Updated at %s" % (config.INFOCASTER_TEXT_FILE))
 
 	except Exception as e:
 

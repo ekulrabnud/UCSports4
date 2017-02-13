@@ -115,14 +115,14 @@ def make_lineups(lineups):
 			channelName = i['name']
 			print channelName
 			channelNumber = i['channelNumber']
-			callsign = i['callsign']
+		
 			channelNumber = i['channelNumber']
 			stationID = i['stationID']
 			logoFilename = i['logoFilename']
 
 
-			c.execute('''INSERT INTO uctvLineups (lineupID,channelNumber,channelName,callsign,stationID,logoFilename)
-				VALUES (?,?,?,?,?,?)''',(lineupID,channelNumber,channelName,callsign,stationID,logoFilename))
+			c.execute('''INSERT INTO uctvLineups (lineupID,channelNumber,channelName,stationID,logoFilename)
+				VALUES (?,?,?,?,?,?)''',(lineupID,channelNumber,channelName,stationID,logoFilename))
 	conn.commit()
 
 def make_infocaster_file(startTime,stopTime,date):

@@ -23,14 +23,15 @@ conn.commit()
 
 for lineup in availableLineups:
     if lineup:
+     
         for i in lineup['stations']:
-            print lineup['lineupID'],i['channelNumber'],i['callsign'],i['name'],i['stationID']
+            print lineup['lineupID'],lineup['providerName'],i['channelNumber'],i['name'],i['stationID']
 
-            c.execute('''INSERT INTO uctvLineups(lineupID,channelNumber,callsign,channelName,stationID)
-                    VALUES (?,?,?,?,?)''',(lineup['lineupID'],i['channelNumber'],i['callsign'],i['name'],i['stationID']))
+            c.execute('''INSERT INTO uctvLineups(lineupID,providerName,channelNumber,channelName,stationID)
+                    VALUES (?,?,?,?,?)''',(lineup['lineupID'],lineup['providerName'],i['channelNumber'],i['name'],i['stationID']))
 
 
-#conn.commit()
+conn.commit()
 
 
 

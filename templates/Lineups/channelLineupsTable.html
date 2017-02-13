@@ -4,7 +4,6 @@
     <tr>
       
       <th>Orig Channel #</th>
-      <th>Callsign</th>
       <th>Name</th>
       <th class="hidden-xs">StationID</th>
       <th class="hidden-xs">LineupID</th>
@@ -20,7 +19,7 @@
 
         <tr id="{{i['id']}}" class="assigned">
         <td > <strong> {{ i['channelNumber'] }} </strong>  </td>
-        <td> {{i['callsign']}}</td>
+        <!--<td> {{i['callsign']}}</td>-->
         <td class="channelName" contenteditable="true">  {{ i['channelName'] }}    </td>
         <td class="hidden-xs">  {{ i['stationID'] }}    </td>
         <td class="hidden-xs">  {{ i['lineupID'] }}    </td>
@@ -42,7 +41,7 @@
 
         <tr id="{{i['id']}}" class="unassigned">
         <td >  {{ i['channelNumber'] }}    </td>
-        <td> {{i['callsign']}}</td>
+        <!--<td> {{i['callsign']}}</td>-->
         <td class="channelName" contenteditable="true">  {{ i['channelName'] }}    </td>
         <td class="hidden-xs">  {{ i['stationID'] }}    </td>
         <td class="hidden-xs">  {{ i['lineupID'] }}    </td>

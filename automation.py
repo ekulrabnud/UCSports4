@@ -1,4 +1,4 @@
-import sevenDaySchedule as sds
+# import sevenDaySchedule as sds
 # import make_infocastertxt_sports_for_today as misft
 from datetime import datetime as dt
 import time
@@ -33,10 +33,12 @@ def do_it_early(start_time):
 		
 		utils.get_lineup_listings(ALL_DAY_START,DAY_STOP,TODAY,config.LINEUPS,cursor)
 		print "Got Lineup Listings"
-		# utils.make_infocaster_file(ALL_DAY_START,DAY_STOP,TODAY,cursor)
-		# print "Made ALL_DAY Infocaster text file"
-		# utils.update_crestron_live_sports_db(conn)
-		# print "Updated Crestron db"
+		# # utils.make_infocaster_file(ALL_DAY_START,DAY_STOP,TODAY,cursor)
+		# # print "Made ALL_DAY Infocaster text file"
+		# # utils.update_crestron_live_sports_db(conn)
+		# # print "Updated Crestron db"utils.make_crestron_live_sports_file(TODAY,cursor)
+		utils.make_infocaster_file(ALL_DAY_START,DAY_STOP,TODAY,cursor)
+		print "Updated Infocaster File"
 		utils.make_crestron_live_sports_file(TODAY,cursor)
 		print "Updated Crestron TXT file"
 
@@ -53,15 +55,9 @@ def do_it_late(start_time):
 def auto():
 
 	 	try:
-	 		print "Checking Time"
-			if dt.now().hour == 4:
 
-				do_it_early(ALL_DAY_START)
-				print "FullDay"
-
-			elif dt.now().hour == 15:
-				do_it_late(HALF_DAY_START)	
-				print "HALF DAY"
+			do_it_early(ALL_DAY_START)
+			
 	 	except Exception as e:
 	 		print "problem %s" % e
 	
