@@ -13,7 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
-conn = sqlite3.connect('uctvDb')
+conn = sqlite3.connect(config.DATABASE)
 conn.row_factory = sqlite3.Row
 # conn.text_factory = str
 cursor = conn.cursor()
@@ -127,6 +127,7 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 	# get list of station ids in channel plan
 	query = cursor.execute('''SELECT DISTINCT stationID from uctvLineups WHERE uctvNo NOT NULL''')
 	stationIDs = [i[0] for i in query.fetchall()]
+	
 
 	cursor.execute('''DELETE FROM liveSports''')
 	cursor.execute('''DELETE FROM crestronLiveSports''')
@@ -176,7 +177,7 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 						
 	cursor.execute('''UPDATE liveSports
 					SET 
-					uctvNo = (SELECT uctvNo FROM uctvLineups WHERE uctvLineups.stationID = liveSports.stationID),
+					uctvNo = (SELECT uctvNo FROM uctvLineups WHERE uctvLineups.stationID = liveSports.stationID AND uctvLineups.uctvNo NOT NULL),
 					channelName = (SELECT channelName FROM uctvLineups WHERE uctvLineups.stationID = liveSports.stationID)	''')
 	# cursor.connection.commit()
 
@@ -228,7 +229,7 @@ def getCrestronLiveSports(db):
 
 def get_live_sports(date,start,stop,cursor):
 
-		query = cursor.execute('''  SELECT liveSports.id,uctvLineups.uctvNo,uctvLineups.channelName,listingID,HD,sport,event,startTime
+		query = cursor.execute('''  SELECT DISTINCT uctvLineups.uctvNo,uctvLineups.channelName,listingID,HD,sport,event,startTime
 							FROM liveSports 
 							INNER JOIN uctvLineups
 							ON livesports.stationID = uctvLineups.stationID
@@ -236,9 +237,12 @@ def get_live_sports(date,start,stop,cursor):
 							AND  startTime BETWEEN ? AND ? AND uctvLineups.uctvNo NOT NULL''',(date,start,stop))
 
 		liveSports = [dict(row) for row in query.fetchall()]
-		newListings = combiner(liveSports)
-		sportslist = th.sort_by_time(newListings)
-
+		# for i in liveSports:
+		# 	if i['listingID'] == 379854553:
+		# 		print i['id'],i['startTime']
+			# print i['startTime'], i['event'],i['listingID']
+		sportslist = th.sort_by_time(liveSports)
+		
 		# for i in sportslist:
 		# 	print i
 
@@ -249,34 +253,36 @@ def make_infocaster_file(startTime,stopTime,date,cursor):
 	start = startTime
 	stop = stopTime
 
-	query = cursor.execute('''  SELECT uctvLineups.uctvNo,uctvLineups.channelName,listingID,HD,sport,event,startTime
-							FROM liveSports 
-							INNER JOIN uctvLineups
-							ON livesports.stationID = uctvLineups.stationID
-							WHERE date = ? 
-							AND  startTime BETWEEN ? AND ? AND uctvLineups.uctvNo NOT NULL
-							''',(date,start,stop))
+	# query = cursor.execute('''  SELECT DISTINCT uctvLineups.uctvNo,uctvLineups.channelName,listingID,HD,sport,event,startTime
+	# 						FROM liveSports 
+	# 						INNER JOIN uctvLineups
+	# 						ON livesports.stationID = uctvLineups.stationID
+	# 						WHERE date = ? 
+	# 						AND  startTime BETWEEN ? AND ? AND uctvLineups.uctvNo NOT NULL
+	# 						''',(date,start,stop))
+
+	query = cursor.execute('''SELECT uctvNo,channelName,sport,event,startTime
+							FROM liveSports
+							WHERE date = ?
+							AND startTime BETWEEN ? and ? ''',(date,start,stop))
 
 	listings = [dict(row) for row in query.fetchall()]
-
-	newListings = combiner(listings)
-
-	sortedListings = sorted(newListings,key=lambda d:(d['sport'],d['startTime']))
-
+	
+	sortedListings = sorted(listings,key=lambda d:(d['sport'],d['startTime']))
 	csport = None
 	
 	with open(config.INFOCASTER_TEXT_FILE,'w') as f:
 
 		for i in sortedListings:
-
+		
 			startTime = th.convert_to_am_pm(i['startTime'])
 
-			if i['SD'] == i['uctvNo']:
-				hd = ''
-				sd = i['SD']
-			else:
-				hd = i['uctvNo']
-				sd = i['SD']
+			# if i['SD'] == i['uctvNo']:
+			# 	hd = ''
+			# 	sd = i['SD']
+			# else:
+			# 	hd = i['uctvNo']
+			# 	sd = i['SD']
 			
 			#handle events that are too long to fit in line
 			event = i['event'] if not len(i['event']) > 42 else i['event'][:42] + '..'
@@ -285,21 +291,24 @@ def make_infocaster_file(startTime,stopTime,date,cursor):
 			# print type(event),event
 		
 			if csport == i['sport']:
-				row = ",%s,%s,%s,%s,%s\n" % (startTime,event,i['channelName'],hd,sd)
+				row = ",%s,%s,%s,%s,%s\n" % (startTime,event,i['channelName'],i['uctvNo'],'')
 				f.write(row)
 
 			else:
 				row = "%s,,,,,\n" % i['sport']
 				f.write(row)
-				row = ",%s,%s,%s,%s,%s\n" % (startTime,event,i['channelName'],hd,sd)
+				row = ",%s,%s,%s,%s,%s\n" % (startTime,event,i['channelName'],i['uctvNo'],'')
 				f.write(row)
 				csport = i['sport']
+# make_infocaster_file(START,STOP,DATETODAY,cursor)
 
 def make_crestron_live_sports_file(date,cursor):
 
 	query = cursor.execute('''SELECT * FROM crestronLiveSports WHERE date = ?''',(date,))
 	
 	liveSports = [dict(row) for row in query.fetchall()]
+
+	
 	
 	with open(config.CRESTRON_LIVE_FILE,'w') as file:
 
@@ -311,6 +320,8 @@ def make_crestron_live_sports_file(date,cursor):
 			newline = ','.join(i for i in line)
 		
 			file.write(newline)
+
+
 
 
 

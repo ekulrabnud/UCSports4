@@ -1,7 +1,7 @@
 import sqlite3
 import config
 
-conn = sqlite3.connect('uctvdb')
+conn = sqlite3.connect(config.DATABASE)
 
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
@@ -16,8 +16,6 @@ remove2 = [
 	90.2,
 	91.1,
 	91.2,
-	92.1,
-	92.2,
 	93.1
 ]
 
@@ -62,7 +60,7 @@ with open('testGuideMaker.txt','w') as file:
 		uctvNo = str(i['uctvNo'])
 		emptyfield = "URL"
 
-		line = channel +','+uctvNo+','+emptyfield+'\n'
+		line = channel.encode('utf-8') +','+uctvNo+','+emptyfield+'\n'
 		print line
 		file.write(line)
 

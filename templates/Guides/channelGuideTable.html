@@ -15,11 +15,7 @@
         {% if i['uctvNo'] != 'None' %}
         <tr id="{{i['id']}}">
             <td class="uctvNo channelGuide " >   {{ i['uctvNo'] }}   </td>
-            {% if i['HD'] == 1 %}
-            <td class="channelName channelGuide highlight" > <strong> {{ i['channelName'] }} </strong>   </td>
-            {% else %}
              <td class="channelName channelGuide" > {{ i['channelName'] }}   </td>
-             {% endif %}
             <td class="hidden-xs"> {{i['providerName']}} </td>
             <td class="hidden-xs"> {{i['channelNumber']}} </td>
             <td class="hidden-xs"> {{i['modulator']}} </td>

@@ -17,9 +17,9 @@ for i in lineupList:
 
 availableLineups = [api.lineup_details(id) for id in lineupList]
 
-# c.execute('DELETE FROM uctvLineups')
+c.execute('DELETE FROM uctvLineups')
 
-# conn.commit()
+conn.commit()
 
 for lineup in availableLineups:
     if lineup:
