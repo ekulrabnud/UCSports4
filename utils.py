@@ -47,7 +47,6 @@ def get_events():
 				total_event_days = dateMax - dateMin
 				#loop through events and add missing dates
 				for i in range(0,abs(total_event_days.days)+1):
-					print date,event
 					date = dateMin + timedelta(days=i)
 					dbinsert(date,event)
 				
@@ -237,14 +236,8 @@ def get_live_sports(date,start,stop,cursor):
 							AND  startTime BETWEEN ? AND ? AND uctvLineups.uctvNo NOT NULL''',(date,start,stop))
 
 		liveSports = [dict(row) for row in query.fetchall()]
-		# for i in liveSports:
-		# 	if i['listingID'] == 379854553:
-		# 		print i['id'],i['startTime']
-			# print i['startTime'], i['event'],i['listingID']
+	
 		sportslist = th.sort_by_time(liveSports)
-		
-		# for i in sportslist:
-		# 	print i
 
 		return sportslist
 
@@ -288,7 +281,7 @@ def make_infocaster_file(startTime,stopTime,date,cursor):
 			event = i['event'] if not len(i['event']) > 42 else i['event'][:42] + '..'
 			#remove comma from event to stop ffing up csv file
 			event = event.replace(',',' ')
-			# print type(event),event
+		
 		
 			if csport == i['sport']:
 				row = ",%s,%s,%s,%s,%s\n" % (startTime,event,i['channelName'],i['uctvNo'],'')
