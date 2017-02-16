@@ -187,9 +187,7 @@ $(document).ready(function() {
     $.get("/liveSports", function(data) {
        
         $("#liveSports").html(data);
-
-
-
+    
         $("#save").prop('disabled',true);
     
         // cellEdit();
@@ -217,10 +215,13 @@ $(document).ready(function() {
         };
 
         initializeDatePicker();
+        $("#submit").trigger('click');
 
         $("#printHeading").html("UCTV Sports Schedule for " + $('#datePicker').find("input").val());
 
         $('#submit').click(function() {
+
+            console.log('submit clicked')
          
             $.ajax({
                 url: '/liveSports',

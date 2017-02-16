@@ -12,11 +12,11 @@ table{
 }
 
 
-th{
+/*th{
 
 	border:5px solid black;
 
-}
+}*/
 
 
 
@@ -106,9 +106,7 @@ th{
 	background-color: #FFFFFF;
 }
 */
-#datePicker,#startTimePicker,#endTimePicker{
-	width:150px;
-}
+
 
 
 
