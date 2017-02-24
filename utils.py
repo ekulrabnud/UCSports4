@@ -126,6 +126,8 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 	# get list of station ids in channel plan
 	query = cursor.execute('''SELECT DISTINCT stationID from uctvLineups WHERE uctvNo NOT NULL''')
 	stationIDs = [i[0] for i in query.fetchall()]
+
+
 	
 
 	cursor.execute('''DELETE FROM liveSports''')
@@ -254,7 +256,7 @@ def make_infocaster_file(startTime,stopTime,date,cursor):
 	# 						AND  startTime BETWEEN ? AND ? AND uctvLineups.uctvNo NOT NULL
 	# 						''',(date,start,stop))
 
-	query = cursor.execute('''SELECT uctvNo,channelName,sport,event,startTime
+	query = cursor.execute('''SELECT DISTINCT uctvNo,channelName,sport,event,startTime
 							FROM liveSports
 							WHERE date = ?
 							AND startTime BETWEEN ? and ? ''',(date,start,stop))
