@@ -190,7 +190,7 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 	#clean up live sport
 	print " insert into crestron live sports"						
 	cursor.execute('''INSERT INTO crestronLiveSports (channelName,uctvNo,sport,date,startTime,stopTime,duration,event)
-			SELECT 	uctvLineups.channelName,
+			SELECT DISTINCT uctvLineups.channelName,
 					uctvLineups.uctvNo,
 					liveSports.sport,
 					liveSports.date,
@@ -207,7 +207,7 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 
 def getChannels(db):
 
-	query = db.execute('''SELECT id,channelNumber,channelName,uctvNo,providerName,rfChannel,modulator,HD
+	query = db.execute('''SELECT id,channelNumber,channelName,uctvNo,providerName,HD
 						   FROM uctvLineups 
 						   WHERE uctvNo NOT NULL
 						   ORDER BY uctvNo''')

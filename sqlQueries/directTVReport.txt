@@ -1,0 +1,13 @@
+select uctvLineups.uctvNo,uctvLineups.channelNumber,uctvLineups.channelName,liveSports.event,liveSports.date,liveSports.startTime,directvBoxes.receiverId,encoders.ip,encoders.enocoderId,directvBoxes.enocoderInputPort
+from uctvLineups
+inner join
+liveSports
+on
+uctvLineups.uctvNo = liveSports.uctvNo
+inner join 
+directvBoxes
+on directvBoxes.uctvNo = liveSports.uctvNo
+inner join
+encoders
+on encoders.enocoderId = directvBoxes.endcoderId
+where liveSports.date = '2017-03-22'

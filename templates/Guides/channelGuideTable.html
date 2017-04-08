@@ -7,8 +7,7 @@
             <th>Name</th>
             <th class="hidden-xs">provider</th>
             <th class="hidden-xs">orig Chan</th>
-            <th class="hidden-xs">modulator</th>
-             <th class="hidden-xs">RF#</th>
+    
         </tr>
     </thead>
         {% for i in channels %}
@@ -18,8 +17,7 @@
              <td class="channelName channelGuide" > {{ i['channelName'] }}   </td>
             <td class="hidden-xs"> {{i['providerName']}} </td>
             <td class="hidden-xs"> {{i['channelNumber']}} </td>
-            <td class="hidden-xs"> {{i['modulator']}} </td>
-             <td class="hidden-xs"> {{i['rf']}} </td>
+     
         </tr>
         {% endif %}
         {% endfor %}
