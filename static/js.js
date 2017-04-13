@@ -288,7 +288,7 @@ $(document).ready(function() {
         $('#edit').click(function() {
         
             $.get('/editLiveSports',function(data){
-                
+                console.log(data)
                 $('#liveSportsTable').empty().html(data);
                 $("#save").prop('disabled',false);
             })
@@ -448,10 +448,6 @@ $(document).ready(function() {
         $("#docs").html(data);
     });
 /**************************************************************************************/
-      $.get("/directvFaultLog", function(data) {
-     
-        $("#directvFaultLog").html(data);
-    });
 
 
 
