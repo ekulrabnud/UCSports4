@@ -288,7 +288,9 @@ $(document).ready(function() {
         $('#edit').click(function() {
         
             $.get('/editLiveSports',function(data){
+                console.log("hello");
                 console.log(data)
+
                 $('#liveSportsTable').empty().html(data);
                 $("#save").prop('disabled',false);
             })

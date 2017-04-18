@@ -94,10 +94,10 @@ def liveSports():
 def edit():
 
 	sportslist = utils.get_live_sports(DATETODAY,START,STOP,g.db)
-	
+	print len(sportslist)
 	return render_template('LiveSports/liveSportsEdit.html',sportslist=sportslist)
 
-	
+
 @app.route('/saveLiveSportsEdit',methods=['POST'])
 def save():
 	
