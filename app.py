@@ -9,6 +9,7 @@ import utils
 import json
 
 
+
 from tvMediaApi_dev import TvMedia
 
 app = Flask(__name__)
@@ -387,7 +388,10 @@ def sandbox():
 	return render_template('sandbox/sandbox.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=config.PORT)
+	import logging
+	# logging.basicConfig(filename='chanappError.log',level=logging.ERROR)
+	logging.basicConfig(filename='chanappDebug.log',level=logging.DEBUG)
+	app.run(host='0.0.0.0',port=config.PORT)
 
 
 
