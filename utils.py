@@ -163,10 +163,15 @@ def get_lineup_listings(start,stop,date,lineups,cursor):
 						startTime = startTime[1]
 						duration = i['duration']
 						sport = i['showName']
+						#strip commas from events or else it screws up the way node red parses column data
+						print event
+						event = event.replace(',',' ')
+						print event
+
 						stationID = i['stationID']
 						stopTime = th.addTime(startTime,duration)
 						listingID = i['listingID']
-						print i['listDateTime'],startTime,sport,stationID,listingID
+						#print i['listDateTime'],startTime,sport,stationID,listingID
 
 						
 						cursor.execute('''INSERT INTO liveSports (stationID,date,startTime,duration,stopTime,sport,event,listingID)

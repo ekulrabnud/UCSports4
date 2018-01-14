@@ -1,0 +1,95 @@
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">A&amp;E</FONT>,48.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">AMC</FONT>,44.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Antenna</FONT>,9.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">BET</FONT>,45.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Big Ten</FONT>,14.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Bloomberg</FONT>,30.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Bounce</FONT>,26.5,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Buzzr</FONT>,50.4,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">CBS Sports</FONT>,15.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">CLTV</FONT>,9.11,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">CNBC</FONT>,28.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">CNN</FONT>,27.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">CNN HLN</FONT>,27.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Comedy Central</FONT>,43.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Cozi</FONT>,5.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Decades</FONT>,2.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Discovery</FONT>,37.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">E!</FONT>,41.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">ESPN</FONT>,21.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">ESPN U</FONT>,21.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">ESPN2</FONT>,21.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">FX</FONT>,32.12,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Food </FONT>,51.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Fox News</FONT>,32.11,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Fox Sports 1</FONT>,25.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Golf </FONT>,24.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">History</FONT>,36.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Laff</FONT>,7.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Light</FONT>,50.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">LivWell</FONT>,7.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">ME TOO</FONT>,26.4,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">MLB</FONT>,20.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">MSNBC</FONT>,29.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">MeTV</FONT>,26.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Movies!</FONT>,50.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBA Stats</FONT>,,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBA Stats</FONT>,,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBA TV</FONT>,18.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBC Sports</FONT>,16.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBC Sports Chicago</FONT>,17.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NBC Sports Chicago Plus</FONT>,17.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NFL</FONT>,22.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 1</FONT>,19.11,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 10</FONT>,19.20,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 11</FONT>,19.21,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 12</FONT>,19.22,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 13</FONT>,19.23,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 14</FONT>,19.24,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 15</FONT>,19.25,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 16</FONT>,19.26,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 17</FONT>,19.27,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 18</FONT>,19.28,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 19</FONT>,19.29,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 2</FONT>,19.12,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 3</FONT>,19.13,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 4</FONT>,19.14,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 5</FONT>,19.15,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 6</FONT>,19.16,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 7</FONT>,19.17,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice 9</FONT>,19.19,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL Center Ice  8</FONT>,19.18,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">NHL  USA</FONT>,19.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">PBS Create</FONT>,11.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">PBS Kids</FONT>,11.4,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">PBS Prime</FONT>,11.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">SPIKE</FONT>,46.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Sports </FONT>,1.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Suites</FONT>,92.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Syfy</FONT>,47.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TBS</FONT>,33.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">THIS</FONT>,9.3,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TLC</FONT>,38.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TNT</FONT>,35.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TSN1 </FONT>,23.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TV Land</FONT>,42.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">TeleXitos</FONT>,10.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Telemundo (WSNS)</FONT>,10.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Today's Game</FONT>,1.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Travel</FONT>,49.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">U TOO</FONT>,26.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">UCTV 1</FONT>,3.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">UCTV 2</FONT>,3.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">UMN</FONT>,92.2,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">USA</FONT>,34.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">VH1</FONT>,39.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WBBM (CBS)</FONT>,2.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WCIU</FONT>,26.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WFLD (FOX)</FONT>,32.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WGN</FONT>,9.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WLS (ABC)</FONT>,7.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WMAQ (NBC)</FONT>,5.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WPWR</FONT>,50.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">WTTW (PBS)</FONT>,11.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">Weather </FONT>,31.1,URL
+<FONT size=""30"" face=""Crestron Sans Pro"" color=""#ffffff"">truTV</FONT>,52.1,URL

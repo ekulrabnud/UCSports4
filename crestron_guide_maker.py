@@ -33,7 +33,7 @@ query = c.execute('''SELECT id,channelNumber,channelName,uctvNo,stationID,lineup
 result = [dict(row) for row in query.fetchall()]
 
 
-with open('testGuideMaker.txt','w') as file:
+with open('newtvguide.txt','w') as file:
 
 	for i in result:
 		#strip whitespace

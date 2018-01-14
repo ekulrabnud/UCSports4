@@ -59,6 +59,9 @@ def get_lineup_listings(lineups=LINEUPS):
 					startTime = startTime[1]
 					duration = i['duration']
 					sport = i['showName']
+					#strip event of commas otherwise it screws up node red parsing of csv file.
+					event = event.replace(',',' ') 
+
 					stationID = i['stationID']
 					print startTime
 					stopTime = th.addTime(startTime,duration)
