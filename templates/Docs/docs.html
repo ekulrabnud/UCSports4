@@ -14,11 +14,31 @@
 <h2>Software Design</h2>
 <p>UCTV Sports Scheduler has 4 elements</>
 	<ul>
-		<li>Python webserver Flask Framework [Runs on Luke's local computer in UC at 172.22.....</li>
+		<li>Python webserver running on Virtual Machine <b>crestap01</b>.Access server using remote desktop</li>
 		<li>Sqlite database [Runs on same computer as webserver]</li>
-		<li>Infocaster displaying sports schedule data on UCTV channel 1.1</li>
-		<li>TV Media API [offiste data provider]</li>
+		<li>Writes .txt file to be used by Infocaster displaying sports schedule data on UCTV channel 1.1</li>
+		<li>Data provided TV Media API [offiste data provider] Contact = Liz Macdonell lmacdonell@tvmedia.ca </li>
 	</ul>
+
+<h2>Important information</h2>
+<p>
+	
+APIKEY = '22ec502b13e21058c33c1409b148292d'<br>
+API URL = 'http://api.tvmedia.ca/tv/v4/'<br>
+
+Webserver address = chanap01:8000<br>
+
+Live Sports PDF = \\jv.unitedcenter.com\technology\Shares\brady\Uc Sports Menu'<br>
+
+Text file that infocaster reads = \\jv.unitedcenter.com\technology\Shares\Luke\UCTV_CHANNEL_GUIDE\uctvSportsSchedule.txt'<br>
+
+Live sports text file that Crestron reads = \\iisap01.jv.unitedcenter.com\signage\tvguide\Live.txt'<br>
+
+Channel Guide that Crestron reads = \\iisap01.jv.unitedcenter.com\signage\tvguide\Channels.txt'<br>
+
+</p>
+
+	
 
 <h2>Operation</h2>
 <p>Application has 4 tabs</p>
